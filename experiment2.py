@@ -23,7 +23,7 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 model.eval()
 
-# Perplexity function
+# Perplexiteit functie
 def calculate_perplexity(inputs):
     perplexities = []
     for prompt in inputs:
@@ -38,8 +38,8 @@ def calculate_perplexity(inputs):
         gc.collect()
     return perplexities
 
-folder_path = "c_requirements"
-output_dir = "Llama2-13b"
+folder_path = # folder path
+output_dir = "Llama2-13b" # hernoemen per model
 os.makedirs(output_dir, exist_ok=True)
 raw_output_dir = "raw_perplexities"
 os.makedirs(raw_output_dir, exist_ok=True)
@@ -85,7 +85,7 @@ for filename in os.listdir(folder_path):
         # # Save processed data
         # df.to_csv(f"output_{base}.csv", index=False)
 
-        # ----------------------------------------------------------------------------------------------------------------------
+        # --------------------------------------------------------------------------------------- # tekst bestand hernoemen
         with open(os.path.join(output_dir, f"{base}_Llama2-13b.txt"), "w") as f:
             f.write("Average Perplexities:\n")
             f.write(f"uuoo: {np.mean(uuoo):.4f}\n")
@@ -102,7 +102,7 @@ for filename in os.listdir(folder_path):
             ("oouu", oouu, "ouuo", ouuo),
         ]
 
-        # ---------------------------------------------------------------------------------------------------------------------
+        # -----------------------------------------------------------------------------------------# tekst bestand hernoemen
         with open(os.path.join(output_dir, f"{base}_Llama2-13b.txt"), "a") as f:
             f.write("\nWilcoxon Signed-Rank Test Results:\n")
             for name1, data1, name2, data2 in pairs:
@@ -120,8 +120,8 @@ for filename in os.listdir(folder_path):
         # Plot
         plt.figure(figsize=(10, 6))
         plt.boxplot([uuoo, uoou, oouu, ouuo], labels=['uuoo', 'uoou', 'oouu', 'ouuo'], showmeans=True)
-        plt.title(f'Perplexity Distribution for {base}')
-        plt.ylabel('Perplexity')
+        plt.title(f'Perplexiteit distributie van {base}')
+        plt.ylabel('Perplexiteit')
         plt.grid(True)
         plt.tight_layout()
 
