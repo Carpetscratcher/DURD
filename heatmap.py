@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from scipy import stats
 
-folder_path = "C:/Users/alvin_xtd9mn0/Documents/scriptie/cctns"
-document_name = "cctns"
+folder_path = # (folder path)
+document_name = # (doc name)
 
 # verkrijgen van modellen en hun data
 model_data = {}
@@ -34,9 +34,9 @@ for prompt in prompt_types:
     stat, p = kruskal(*rows)
     print(f"Kruskal-Wallis H = {stat:.4f}, p = {p:.4g}")
     if p < 0.05:
-        print("→ Significant difference in model performance.")
+        print("Significant")
     else:
-        print("→ No significant difference.")
+        print("Not significant")
 
 posthoc_matrices = []
 
