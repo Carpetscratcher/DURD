@@ -2,11 +2,11 @@ import os
 import pandas as pd 
 from scipy.stats import mannwhitneyu
 
-folder_cctns = "C:/Users/alvin_xtd9mn0/Documents/scriptie/themas"
+doc = # (file path)
 
-for file in os.listdir(folder_cctns):
+for file in os.listdir(doc):
     if file.endswith("_raw_perplexities.csv"):
-        df = pd.read_csv(os.path.join(folder_cctns, file))
+        df = pd.read_csv(os.path.join(doc, file))
         model_name = file.split("_")[0]
         
         uuoo = df["uuoo"].dropna().values
