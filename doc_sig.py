@@ -5,12 +5,12 @@ import csv
 import math
 import itertools
 
-folder_cctns = "C:/Users/alvin_xtd9mn0/Documents/scriptie/cctns"
-folder_gamma_j = "C:/Users/alvin_xtd9mn0/Documents/scriptie/gamma_j"
-folder_gemini = "C:/Users/alvin_xtd9mn0/Documents/scriptie/gemini"
-folder_qheadache = "C:/Users/alvin_xtd9mn0/Documents/scriptie/qheadache"
-folder_tcs = "C:/Users/alvin_xtd9mn0/Documents/scriptie/tcs"
-folder_themas = "C:/Users/alvin_xtd9mn0/Documents/scriptie/themas"
+folder_cctns = # folder path
+folder_gamma_j = # folder path
+folder_gemini = # folder path
+folder_qheadache = # folder path
+folder_tcs = # folder path
+folder_themas = # folder path
 
 for file in os.listdir(folder_cctns):
     if file.endswith("_raw_perplexities.csv"):
