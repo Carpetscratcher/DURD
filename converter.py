@@ -39,7 +39,7 @@ def clean(x):
         return x.strip().replace('"', '')
     return x
 
-requirements_dir = "requirements"
+requirements_dir = # folder path
 output_dir = "c_requirements"
 
 os.makedirs(output_dir, exist_ok=True)
